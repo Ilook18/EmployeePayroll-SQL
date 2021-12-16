@@ -33,5 +33,10 @@ Alter table employee_payroll Add address varchar(250) not null default 'TBD';
 Alter table employee_payroll Add department varchar(150) default(' ') not null;
 insert into employee_payroll(name,salary,start) values('Bill',300000,'2021-12-18');
 
+/*UC9*/
+exec sp_rename 'employee_payroll.salary', 'basic_pay', 'column';
+Alter table employee_payroll add deductions float , taxable_pay float, tax float, net_pay float;
+
+
 
 
