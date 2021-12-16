@@ -46,4 +46,3 @@ update employee_payroll set basic_pay=2500000, deductions=2500, taxable_pay=3000
 select * from employee_payroll;
 
 
-
