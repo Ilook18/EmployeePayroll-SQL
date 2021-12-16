@@ -31,7 +31,8 @@ select COUNT(salary) from employee_payroll where gender='M' group by gender;
 Alter table employee_payroll add phone_nmber varchar(250);
 Alter table employee_payroll Add address varchar(250) not null default 'TBD';
 Alter table employee_payroll Add department varchar(150) default(' ') not null;
-insert into employee_payroll(name,salary,start) values('Bill',300000,'2021-12-18');
+insert into employee_payroll(name,salary,start,phone_nmber,department) values('Bill',300000,'2021-12-18','7905142214','Finance');
+
 
 /*UC9*/
 exec sp_rename 'employee_payroll.salary', 'basic_pay', 'column';
