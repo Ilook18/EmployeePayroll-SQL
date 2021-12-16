@@ -15,6 +15,10 @@ select * from employee_payroll;
 select name,salary from employee_payroll where name='Bill';
 select * from employee_payroll WHERE start BETWEEN CAST('2021-12-12' AS DATE) AND GETDATE();
 
+/*UC6*/
+Alter table employee_payroll add gender char(1);
+update employee_payroll set gender='F' where name='Terisa';
+update employee_payroll set gender='M' where name='Bill' or name='Charlie';
 
 
 
