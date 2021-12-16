@@ -27,6 +27,11 @@ select MIN(salary) from employee_payroll where gender='M' group by gender;
 select MAX(salary) from employee_payroll where gender='M' group by gender;
 select COUNT(salary) from employee_payroll where gender='M' group by gender;
 
+/*UC8*/
+Alter table employee_payroll add phone_nmber varchar(250);
+Alter table employee_payroll Add address varchar(250) not null default 'TBD';
+Alter table employee_payroll Add department varchar(150) default(' ') not null;
+insert into employee_payroll(name,salary,start) values('Bill',300000,'2021-12-18');
 
 
 
