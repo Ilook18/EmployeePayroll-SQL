@@ -6,3 +6,6 @@ use payroll_service;
 create table employee_payrol(id int identity(1,1) primary key, name varchar(150) Not NULL, salary float NOT NULL, start date NOT NULL);
 
 
+
+
+
