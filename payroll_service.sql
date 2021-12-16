@@ -3,7 +3,7 @@ create database payroll_service;
 use payroll_service;
 
 /*UC2*/
-create table employee_payrol(id int identity(1,1) primary key, name varchar(150) Not NULL, salary float NOT NULL, start date NOT NULL);
+create table employee_payroll(id int identity(1,1) primary key, name varchar(150) Not NULL, salary float NOT NULL, start date NOT NULL);
 
 /*UC3*/
 insert into employee_payroll values ('Bill',20000,'2021-12-13'), ('Charlie',15000,'2021-12-14'), ('Terisa',18000,'2021-12-14');
@@ -31,7 +31,8 @@ select COUNT(salary) from employee_payroll where gender='M' group by gender;
 Alter table employee_payroll add phone_nmber varchar(250);
 Alter table employee_payroll Add address varchar(250) not null default 'TBD';
 Alter table employee_payroll Add department varchar(150) default(' ') not null;
-insert into employee_payroll(name,salary,start) values('Bill',300000,'2021-12-18');
+insert into employee_payroll(name,salary,start,phone_nmber,department) values('Bill',300000,'2021-12-18','7905142214','Finance');
+
 
 
 
