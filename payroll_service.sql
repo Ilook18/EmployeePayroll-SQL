@@ -31,12 +31,18 @@ select COUNT(salary) from employee_payroll where gender='M' group by gender;
 Alter table employee_payroll add phone_nmber varchar(250);
 Alter table employee_payroll Add address varchar(250) not null default 'TBD';
 Alter table employee_payroll Add department varchar(150) default(' ') not null;
-insert into employee_payroll(name,salary,start) values('Bill',300000,'2021-12-18');
+insert into employee_payroll(name,salary,start,phone_nmber,department) values('Bill',300000,'2021-12-18','7905142214','Finance');
 
 /*UC9*/
 exec sp_rename 'employee_payroll.salary', 'basic_pay', 'column';
 Alter table employee_payroll add deductions float , taxable_pay float, tax float, net_pay float;
 
-
+/*UC10*/
+update employee_payroll set department ='Sales' where name='Terisa';
+insert into employee_payroll
+(name,salary,start,gender,phone_nmber,department,basic_pay,deductions,taxable_pay,tax,net_pay)values
+('Terisa',300000,'2021-12-12','F','7905142218','Marketing',300000,3000,25000,2000,2500000);
+update employee_payroll set basic_pay=2500000, deductions=2500, taxable_pay=3000, net_pay=200000 where name='Terisa';
+select * from employee_payroll;
 
 
