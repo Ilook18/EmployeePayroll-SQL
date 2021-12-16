@@ -20,5 +20,13 @@ Alter table employee_payroll add gender char(1);
 update employee_payroll set gender='F' where name='Terisa';
 update employee_payroll set gender='M' where name='Bill' or name='Charlie';
 
+/*UC7*/
+select SUM(salary) from employee_payroll where gender='M' group by gender;
+select AVG(salary) from employee_payroll where gender='M' group by gender;
+select MIN(salary) from employee_payroll where gender='M' group by gender;
+select MAX(salary) from employee_payroll where gender='M' group by gender;
+select COUNT(salary) from employee_payroll where gender='M' group by gender;
+
+
 
 
